@@ -17,12 +17,7 @@ public class Contacts {
 
     @Override
     public String toString() {
-        return "Contacts{" +
-                "Id=" + Id +
-                ", Name='" + Name + '\'' +
-                ", MobileNumber='" + MobileNumber + '\'' +
-                ", City='" + City + '\'' +
-                ", Zipcode='" + Zipcode + '\'' +
-                '}';
+        return "Contacts{}";
     }
 }
+

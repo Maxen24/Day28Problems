@@ -8,10 +8,12 @@ import java.util.List;
 
 //UC-14 Ability to Read/Write the Address Book with Persons Contact as CSV File
 
+// UC-15 Ability to Read or Write the Address Book with Persons Contact as JSON File
+
 public class AddressBookFileIOService {
 
 
-    public static String ADDRESS_FILE_NAME = "AddressBook-file.csv";
+    public static String ADDRESS_FILE_NAME = "AddressBook-file.json";
 
     public void writeData(List<Contacts> addressBookList) {
         System.out.println("Its Working");
@@ -31,7 +33,7 @@ public class AddressBookFileIOService {
 
     public void printData() {
         try {
-            Files.lines(new File("AddressBook-file.csv").toPath()).forEach(System.out::println);
+            Files.lines(new File("AddressBook-file.json").toPath()).forEach(System.out::println);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -39,7 +41,7 @@ public class AddressBookFileIOService {
     public long countEntries() {
         long entries = 0;
         try {
-            entries = Files.lines(new File("AddressBook-file.csv").toPath()).count();
+            entries = Files.lines(new File("AddressBook-file.json").toPath()).count();
         } catch (IOException e) {
 
             e.printStackTrace();
